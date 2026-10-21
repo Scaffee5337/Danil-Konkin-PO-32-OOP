@@ -10,5 +10,15 @@ namespace WinFormsAppAgregate
         string ProductName,
         string Category,
         decimal Price,
-        int Quantity);
+        int Quantity)
+    {
+        public virtual bool Equals(OrderItem? other)
+        {
+            return other is not null && ProductName == other.ProductName;
+        }
+        public override int GetHashCode()
+        {
+            return ProductName?.GetHashCode() ?? 0;
+        }
+    }
 }
