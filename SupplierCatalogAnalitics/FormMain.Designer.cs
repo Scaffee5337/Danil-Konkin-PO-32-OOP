@@ -38,8 +38,8 @@
             btnSort = new Button();
             statusStrip1 = new StatusStrip();
             lblStatus = new ToolStripStatusLabel();
-            statusStrip2 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusStrip2 = new StatusStrip();
             ((System.ComponentModel.ISupportInitialize)dgvCatalog).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -49,7 +49,7 @@
             dgvCatalog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCatalog.Location = new Point(0, 0);
             dgvCatalog.Name = "dgvCatalog";
-            dgvCatalog.Size = new Size(240, 150);
+            dgvCatalog.Size = new Size(788, 162);
             dgvCatalog.TabIndex = 0;
             dgvCatalog.CellContentClick += dgvCatalog_CellContentClick;
             // 
@@ -140,6 +140,12 @@
             lblStatus.Size = new Size(45, 17);
             lblStatus.Text = "Готово";
             // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(118, 17);
+            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // statusStrip2
             // 
             statusStrip2.Location = new Point(0, 406);
@@ -147,12 +153,6 @@
             statusStrip2.Size = new Size(800, 22);
             statusStrip2.TabIndex = 9;
             statusStrip2.Text = "statusStrip2";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(118, 17);
-            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // FormMain
             // 

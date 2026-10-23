@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Linq;
-using SupplierCatalogAnalytics;
+using SupplierCatalogAnalitics;
 
 namespace SupplierCatalogAnalitics
 {
@@ -17,6 +17,7 @@ namespace SupplierCatalogAnalitics
         public FormMain()
         {
             InitializeComponent();
+            MessageBox.Show("Внимание! В данной программе реализованы методы сравнения и объединения каталогов поставщиков с учетом регистра букв в названиях товаров и категорий. Для корректного отображения результатов рекомендуется использовать одинаковый регистр букв в названиях товаров и категорий.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
             catalogService = new CatalogService();
             displayedProducts = catalogService.GetConsolidatedCatalog();
             dgvCatalog.AutoGenerateColumns = true;
