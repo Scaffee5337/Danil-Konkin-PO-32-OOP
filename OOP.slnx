@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="LINQ_WinForms1_SQLite/LINQ_WinForms1_SQLite.csproj" />
+  <Project Path="WinFormsAppAgregate/WinFormsAppAgregate.csproj" Id="2819a10c-7fd9-4d47-b931-4aaecde00774" />
 </Solution>
