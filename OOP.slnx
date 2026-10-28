@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="DeferredAndImmediateLINQ/DeferredAndImmediateLINQ.csproj" Id="6c6660d3-23cb-4383-a13a-445f2ba6428c" />
   <Project Path="LINQOrderBy/LINQOrderBy.csproj" Id="115fb6a1-9bab-4c1f-b259-99d62e1ed5b0" />
   <Project Path="LINQ_WinForms1_SQLite/LINQ_WinForms1_SQLite.csproj" />
   <Project Path="SupplierCatalogAnalitics/SupplierCatalogAnalitics.csproj" Id="cced7ca8-2674-4797-9b73-f85fe6589cdf" />
