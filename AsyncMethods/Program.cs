@@ -18,7 +18,7 @@ namespace AsyncMethods
             Console.WriteLine("[Main] Фоновый расчет успешно завершен.");
             Console.WriteLine("\n[Main] Программа завершила работу.\n");
             //2 задание
-            Console.WriteLine("=== Старт демонстрации асинхронности ===\n");
+            Console.WriteLine("=== 2 ЗАДАНИЕ Старт демонстрации асинхронности ===\n");
             Stopwatch stopwatch = Stopwatch.StartNew();
             Console.WriteLine("Реализация Сценария А (Последовательное выполнение)");
             await DownloadDataAsync("Сервер 1", 2000);
@@ -39,8 +39,21 @@ namespace AsyncMethods
             Console.WriteLine($"Последовательно: {sequentialTime} мс.");
             Console.WriteLine($"Параллельно: {parallelTime} мс.");
             Console.WriteLine($"Выигрыш во времени: {sequentialTime - parallelTime} мс.\n");
-
-
+            //3 задание
+            Console.WriteLine("=== 3 ЗАДАНИЕ Тестирование метода GetSquareAsync ===");
+            Console.WriteLine("Вычисление квадрата числа 12 с задержкой в 1 секунду");
+            int result = await GetSquareAsync(12, 1000);
+            Console.WriteLine($"Результат вычислений: {result}");
+            Console.WriteLine();
+            Console.WriteLine("=== Тестирование асинхронного лямбда-выражения ===");
+            Console.WriteLine("Форматирование строки с задержкой в 1.5 секунды");
+            Func<string, int, Task<string>> formatter = async (text, delay) =>
+            {
+                await Task.Delay(delay);
+                return $"Результат: {text.ToUpper()}";
+            };
+            string formattedText = await formatter("hello, c# async", 1500);
+            Console.WriteLine(formattedText);
         }
         static async Task PrintMessageAsync(string message, int delayMs)
         {
@@ -53,6 +66,11 @@ namespace AsyncMethods
             Console.WriteLine($"[{sourceName}] Загрузка началась");
             await Task.Delay(delayMs);
             Console.WriteLine($"[{sourceName}] Данные успешно загружены");
+        }
+        static async Task<int> GetSquareAsync(int number, int delayMs)
+        {
+            await Task.Delay(delayMs);
+            return number * number;
         }
     }
 }
