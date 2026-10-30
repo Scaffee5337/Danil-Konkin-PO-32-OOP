@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="AsyncMethods/AsyncMethods.csproj" Id="5b9c8d8c-71c9-4a64-8f29-2e19ef9821bf" />
+  <Project Path="CorpFleetAnalytics/CorpFleetAnalytics.csproj" Id="48a1c15d-b46d-4f10-a836-02626c826e38" />
   <Project Path="DeferredAndImmediateLINQ/DeferredAndImmediateLINQ.csproj" Id="6c6660d3-23cb-4383-a13a-445f2ba6428c" />
   <Project Path="LINQOrderBy/LINQOrderBy.csproj" Id="115fb6a1-9bab-4c1f-b259-99d62e1ed5b0" />
   <Project Path="LINQ_WinForms1_SQLite/LINQ_WinForms1_SQLite.csproj" />
