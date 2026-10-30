@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CorpFleetAnalytics.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CorpFleetAnalytics.Models
 {
-    public abstract class Vehicle
+    public abstract class Vehicle : IStorable, IComparable, ICloneable
     {
         public int Id { get; private set; }
         public string Model { get; private set; }
@@ -12,7 +13,19 @@ namespace CorpFleetAnalytics.Models
         public double BasePrice { get; private set; }
         public Category Category { get; private set; }
         public List<MaintenanceService> MaintenanceServices { get; private set; }
-
+        public string FilePath { get; set; } = string.Empty;
+        public int CompareTo(object obj)
+        {
+            if (obj == null) return 1;
+            if (obj is not Vehicle other) throw new ArgumentException("Объект должен быть типа Vehicle.");
+            return BasePrice.CompareTo(other.BasePrice);
+        }
+        public void Save()
+        {
+            if (string.IsNullOrWhiteSpace(FilePath)) throw new InvalidOperationException("Путь сохранения не указан.");
+            File.WriteAllText(FilePath, ToString());
+        }
+        public abstract object Clone();
         protected Vehicle(int id,string model,int power,double basePrice,Category category)
         {
             if (id < 0) throw new ArgumentException("ID не может быть отрицательным.");
