@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CompoundAssignment;
 
 namespace ImplicitAndExplicit
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -38,6 +38,17 @@ namespace ImplicitAndExplicit
             warehouse += 50;
             warehouse += 25;
             Console.WriteLine(warehouse.Id); // Id по-прежнему 1! Новый объект не создавался.
-        }
+
+            Console.WriteLine();
+            Console.WriteLine($"Общий склад: {warehouse.TotalUnits}");
+            ++warehouse;
+            Console.WriteLine($"После ++: {warehouse.TotalUnits}" );
+            Inventory next = warehouse++;
+            Console.WriteLine($"Предыдущий: {next.Id}, {next.TotalUnits}");
+            Console.WriteLine($"Последующий: {warehouse.Id}, {warehouse.TotalUnits}");
+            var expressWarehouse = new ExpressInventory { TotalUnits = 100 };
+            expressWarehouse += 10;
+            Console.WriteLine($"Срочный после += 10: {expressWarehouse.TotalUnits}" );
+        } 
     }
 }

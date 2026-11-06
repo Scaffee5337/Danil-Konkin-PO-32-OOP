@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ImplicitAndExplicit
+namespace CompoundAssignment
 {
     public class Inventory
     {
@@ -10,7 +10,14 @@ namespace ImplicitAndExplicit
         public int Id { get; }
         public int TotalUnits { get; set; }
         public Inventory() => Id = ++globalCount;
-        public void operator +=(int units) => TotalUnits += units;
-        public void operator +=(Inventory other) => TotalUnits += other.TotalUnits;
+        public virtual void operator +=(int units) => TotalUnits += units;
+        public void operator ++() => TotalUnits++;
+        public static Inventory operator ++(Inventory inv)
+        {
+            return new Inventory
+            {
+                TotalUnits = inv.TotalUnits + 1
+            };
+        }
     }
 }
