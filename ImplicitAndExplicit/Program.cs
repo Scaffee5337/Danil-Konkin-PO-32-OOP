@@ -31,6 +31,13 @@ namespace ImplicitAndExplicit
 
             Console.WriteLine($"\nПроверка дробного значения:");
             Console.WriteLine($"{testSize.Bytes} байт = {testMb.Value} МБ");
+
+            Console.WriteLine();
+            var warehouse = new Inventory { TotalUnits = 100 };
+            Console.WriteLine(warehouse.Id); // Id: 1
+            warehouse += 50;
+            warehouse += 25;
+            Console.WriteLine(warehouse.Id); // Id по-прежнему 1! Новый объект не создавался.
         }
     }
 }

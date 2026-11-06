@@ -8,7 +8,7 @@ namespace ClinicCRM.Repositories.Sqlite
 {
     namespace ClinicCRM.Repositories.Sqlite
     {
-        public class SqliteRepository<T> : IRepository<T> where T : class
+        public class SqliteRepository<T> : Interfaces.ClinicCRM.Interfaces.IRepository<T> where T : class
         {
             private readonly string _connectionString;
             private readonly string _selectAllSql;
