@@ -11,6 +11,10 @@ namespace ImplicitAndExplicit
         {
             Value = value;
         }
-
+        public static explicit operator MegaByte(StorageSize size)
+        {
+            if (size == null) throw new ArgumentNullException(nameof(size));
+            return new MegaByte((long)(size.Bytes / 1048576));
+        }
     }
 }

@@ -20,5 +20,10 @@ namespace ImplicitAndExplicit
             if (size == null) throw new ArgumentNullException(nameof(size));
             return size.Bytes;
         }
+        public static explicit operator StorageSize(MegaByte mb)
+        {
+            if (mb == null) throw new ArgumentNullException(nameof(mb));
+            return new StorageSize((long)(mb.Value * 1048576));
+        }
     }
 }
