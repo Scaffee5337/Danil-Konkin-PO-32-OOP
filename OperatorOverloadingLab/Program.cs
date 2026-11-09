@@ -20,6 +20,19 @@
             Console.WriteLine($"m1 != m2: {m1 != m2}");
             if (m1) Console.WriteLine("Счет m1 активен.");
             if (!difference) Console.WriteLine("Баланс отрицательный или нулевой.");
+            Console.WriteLine();
+            Console.WriteLine("=== Проверка преобразования типов ===");
+            Money m = 12550L;
+            Console.WriteLine($"Из long в Money: {m}");
+            long allKopeks = (long)m;
+            Console.WriteLine($"Из money в long: {allKopeks} копеек");
+            CurrencyRecord cr = (CurrencyRecord)m;
+            Console.WriteLine($"Из Money  в CurrencyRecord: {cr}");
+            Money fromCr = (Money)cr;
+            Console.WriteLine($"Из CurrencyRecord в Money: {fromCr}");
+            CurrencyRecord roundedRecord = new CurrencyRecord("RUB", 125.555m);
+            Money roundedMoney = (Money)roundedRecord;
+            Console.WriteLine($"Проверка округления: {roundedMoney}");
         }
     }
 }

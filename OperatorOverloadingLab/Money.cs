@@ -68,5 +68,25 @@ namespace OperatorOverloadingLab
         {
             return TotalKopeks.GetHashCode();
         }
+        public static implicit operator Money(long totalKopeks)
+        {
+            return FromTotalKopeks(totalKopeks);
+        }
+        public static explicit operator CurrencyRecord(Money money)
+        {
+            decimal amount = money.Rubles + money.Kopeks / 100m;
+            return new CurrencyRecord("RUB", amount);
+        }
+        public static explicit operator long(Money money)
+        {
+            return money.TotalKopeks;
+        }
+        public static explicit operator Money(CurrencyRecord record)
+        {
+            ArgumentNullException.ThrowIfNull(record);
+            decimal roundedKopeks = decimal.Round(record.Amount * 100m, 0);
+            long totalKopeks = checked((long)roundedKopeks);
+            return FromTotalKopeks(totalKopeks);
+        }
     }
 }
