@@ -6,6 +6,7 @@
   <Project Path="ImplicitAndExplicit/ImplicitAndExplicit.csproj" Id="f35fe5e6-f406-407e-a63d-714f811d3dee" />
   <Project Path="LINQOrderBy/LINQOrderBy.csproj" Id="115fb6a1-9bab-4c1f-b259-99d62e1ed5b0" />
   <Project Path="LINQ_WinForms1_SQLite/LINQ_WinForms1_SQLite.csproj" />
+  <Project Path="OperatorOverloadingLab/OperatorOverloadingLab.csproj" Id="8ae5870a-bab3-4cfd-ac50-4b372e242d28" />
   <Project Path="SupplierCatalogAnalitics/SupplierCatalogAnalitics.csproj" Id="cced7ca8-2674-4797-9b73-f85fe6589cdf" />
   <Project Path="WinFormsAppAgregate/WinFormsAppAgregate.csproj" Id="2819a10c-7fd9-4d47-b931-4aaecde00774" />
 </Solution>
