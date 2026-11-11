@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Indexatory
 {
-    class Library
+    public class Library
     {
         private Book[] books;
         public Library(Book[] initialBooks) => books = initialBooks;
