@@ -17,6 +17,16 @@
             {
                 Console.WriteLine($"[Некорректное имя]: {ex.Message}");
             }
+            Console.WriteLine("\n Задание 2. Повторный проброс исключений");
+            try
+            {
+                PaymentProcessor.ExecutePayment();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\n Трассировка стека (StackTrace) в Main");
+                Console.WriteLine(ex.StackTrace);
+            }
         }
     }
 }
