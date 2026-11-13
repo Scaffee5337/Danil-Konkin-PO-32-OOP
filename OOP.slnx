@@ -3,6 +3,7 @@
   <Project Path="ClinicCRM/ClinicCRM.csproj" Id="69946e18-9be7-493b-a7cd-7426a425ffca" />
   <Project Path="CorpFleetAnalytics/CorpFleetAnalytics.csproj" Id="48a1c15d-b46d-4f10-a836-02626c826e38" />
   <Project Path="DeferredAndImmediateLINQ/DeferredAndImmediateLINQ.csproj" Id="6c6660d3-23cb-4383-a13a-445f2ba6428c" />
+  <Project Path="Exceptions/Exceptions.csproj" Id="dbe3911d-8949-4794-80a5-878992ebfe3b" />
   <Project Path="ImplicitAndExplicit/ImplicitAndExplicit.csproj" Id="f35fe5e6-f406-407e-a63d-714f811d3dee" />
   <Project Path="Indexatory/Indexatory.csproj" Id="5cff434d-b6a2-44a7-a4e5-a11e7732dc66" />
   <Project Path="LINQOrderBy/LINQOrderBy.csproj" Id="115fb6a1-9bab-4c1f-b259-99d62e1ed5b0" />
