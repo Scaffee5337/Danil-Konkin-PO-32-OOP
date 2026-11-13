@@ -16,6 +16,13 @@ namespace Exceptions
             ProcessTransaction(-5, 3);
             Console.WriteLine("\n Тест 2.3: (10, 2)");
             ProcessTransaction(10, 2);
+            Console.WriteLine();
+            Console.WriteLine("Тест 3.1: невалидная строка 'abc'");
+            CalculateSquareTryCatch("abc");
+            CalculateSquareTryParse("abc");
+            Console.WriteLine("Тест 3.2: валидная строка '15;");
+            CalculateSquareTryCatch("15");
+            CalculateSquareTryParse("15");
         }
         static void SafeDivide(int x, int y)
         {
@@ -52,6 +59,26 @@ namespace Exceptions
             {
                 Console.WriteLine($"Общий catch: {ex.Message}");
             }
+        }
+        static void CalculateSquareTryCatch(string data)
+        {
+            try
+            {
+                int val = int.Parse(data);
+                Console.WriteLine($"Квадрат: {val * val}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Некорректный формат числа");
+            }
+        }
+        // 2. Вариант с TryParse (быстрый и оптимальный):
+        static void CalculateSquareTryParse(string data)
+        {
+            if (int.TryParse(data, out int val))
+                Console.WriteLine($"Квадрат: {val * val}");
+            else
+                Console.WriteLine("Некорректный ввод (без исключения)");
         }
     }
 }
