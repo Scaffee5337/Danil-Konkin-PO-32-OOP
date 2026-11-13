@@ -10,5 +10,6 @@
   <Project Path="LINQ_WinForms1_SQLite/LINQ_WinForms1_SQLite.csproj" />
   <Project Path="OperatorOverloadingLab/OperatorOverloadingLab.csproj" Id="8ae5870a-bab3-4cfd-ac50-4b372e242d28" />
   <Project Path="SupplierCatalogAnalitics/SupplierCatalogAnalitics.csproj" Id="cced7ca8-2674-4797-9b73-f85fe6589cdf" />
+  <Project Path="ThrowAndExceptions/ThrowAndExceptions.csproj" Id="d1629b53-5b19-465b-9d00-68952c3775ab" />
   <Project Path="WinFormsAppAgregate/WinFormsAppAgregate.csproj" Id="2819a10c-7fd9-4d47-b931-4aaecde00774" />
 </Solution>
