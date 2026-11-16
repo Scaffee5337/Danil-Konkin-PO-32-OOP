@@ -18,6 +18,5 @@ namespace ThrowAndExceptions
             }
             Console.WriteLine($"Пользователь {username} (возраст: {age} успешно зарегистрирован.)");
         }
-
     }
 }
