@@ -32,9 +32,9 @@
             {
                 DataParser.ParseAndDivide(new string[] { "100", "abc" }, 1, 0);
             }
-            catch (DivideByZeroException ex) { Console.WriteLine("Деление на ноль!"); }
-            catch (FormatException ex) { Console.WriteLine("Неверный формат числа!"); }
-            catch (IndexOutOfRangeException ex) { Console.WriteLine("Индекс вне диапазона!"); }
+            catch (DivideByZeroException) { Console.WriteLine("Деление на ноль!"); }
+            catch (FormatException) { Console.WriteLine("Неверный формат числа!"); }
+            catch (IndexOutOfRangeException) { Console.WriteLine("Индекс вне диапазона!"); }
             catch (Exception ex) { Console.WriteLine($"Общая ошибка: {ex.Message}"); }
         }
     }
