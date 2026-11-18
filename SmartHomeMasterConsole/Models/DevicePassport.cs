@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartHomeMaster_Console.Models;
+namespace SmartHomeMasterConsole.Models;
 
 public class DevicePassport : ICloneable
 {

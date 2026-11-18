@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartHomeMasterConsole.Models;
+namespace SmartHomeMaster_Console.Models;
 
 public class SmartActuator : Device
 {
