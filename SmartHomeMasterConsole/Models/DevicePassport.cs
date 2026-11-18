@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartHomeMasterConsole.Models
+namespace SmartHomeMaster_Console.Models;
+
+public class DevicePassport : ICloneable
 {
-    internal class DevicePassport
+    public string Manufacturer { get; set; } = string.Empty;
+
+    public string SerialNumber { get; set; } = string.Empty;
+
+    public DateTime CalibrationDate { get; set; }
+
+    public object Clone()
     {
+        return MemberwiseClone();
     }
 }
