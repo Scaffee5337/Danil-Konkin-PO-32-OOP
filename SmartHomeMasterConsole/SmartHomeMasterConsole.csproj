@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="smart_home.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="smart_home.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0" />
   </ItemGroup>
 
