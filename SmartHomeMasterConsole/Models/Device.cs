@@ -38,4 +38,12 @@ public abstract class Device
     {
         return HashCode.Combine(Id, Model);
     }
+    public void Activate()
+    {
+        _isActive = true;
+    }
+    public void Deactivate()
+    {
+        _isActive = false;
+    }
 }
